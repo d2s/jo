@@ -11,7 +11,7 @@ joview, jotitle, jolabel, jocard, jotable, jodivider, jocontrol, jocontainer, jo
 	display: block;
 	padding: 0;
 	margin: 0;
-	
+
 	font: normal 15px "Apres", "Verdana";
 /*	color: #000; */
 	position: relative;
@@ -59,7 +59,7 @@ jotitle {
 	-moz-border-image: url(titletop.png) 1 stretch stretch;
 	border-image: url(titletop.png) 1 stretch stretch;
 	padding: 9px 5px;
-	
+
 	margin: 0;
 	text-align: center;
 	color: rgba(255, 255, 255, .9);
@@ -246,7 +246,7 @@ jolistitem.selected, jomenuitem.selected {
 	border-bottom: 1px solid rgba(255, 255, 255, .4);
 	background: rgba(0, 64, 255, .4);
 	color: #fff;
-	
+
 }
 
 jomenutitle {
@@ -261,7 +261,7 @@ jobutton {
 	cursor: pointer;
 	outline: none;
 	outline-color: transparent;
-	
+
 /*	padding: 10px;
 	border: 1px solid #999;
 	background: rgba(0, 0, 0, .6);
@@ -286,7 +286,7 @@ jobutton {
 
 	background-repeat: repeat-x;
 
-/*	
+/*
 	-webkit-background-origin: content-box;
 	-webkit-background-size: 100% 100%;
 	background-origin: content-box;
@@ -322,7 +322,7 @@ jobutton.disabled:hover, joButton.disabled:hover {
 	border-image: url(grayButton.png) 13 stretch stretch;
 	*/
 }
-	
+
 jobutton, jotitle, jooptionitem, joexpandotitle {
 	text-shadow: 0 0 4px #rgba(0, 0, 0, .8);
 }
@@ -331,7 +331,7 @@ joinput.password, input.password  {
 	-webkit-text-security: disc;
 	-moz-text-security: disc;
 	-o-text-security: disc;
-	text-security: disc;	
+	text-security: disc;
 }
 
 jogroup {
@@ -392,7 +392,7 @@ joexpandotitle {
 
 	background-repeat: no-repeat;
 
-/*	
+/*
 	-webkit-background-origin: content-box;
 	-webkit-background-size: 100% 100%;
 	background-origin: content-box;
@@ -402,7 +402,7 @@ joexpandotitle {
 */
 	background-position: top left;
 	background-size: 100% 50%;
-	
+
 }
 
 joexpando.open > joexpandotitle {
@@ -614,7 +614,7 @@ joshim {
 	bottom: 0;
 	background: rgba(0, 0, 0, .6);
 	opacity: 1;
-	
+
 	-webkit-transition: opacity .2s ease, display .2s ease;
 }
 
@@ -672,7 +672,7 @@ jospinner:after {
   from {-webkit-transform:scale(0.5) rotate(0deg);}
   to {-webkit-transform:scale(0.5) rotate(360deg);}
 }
-	
+
 
 jotoolbar {
 	background: rgba(0, 0, 0, .6);
@@ -698,7 +698,7 @@ jopopup {
 
 	border: 2px solid #fff;
 	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .8);
-	
+
 	background-color: #34c;
 	color: #fff;
 
@@ -708,7 +708,7 @@ jopopup {
 	background-size: 100% 20px;
 
 	-webkit-transition: -webkit-transform .4s ease-in, opacity .4s ease-in;
-	
+
 	/* ios */
 	-webkit-border-radius: 20px;
 	max-width: 280px;

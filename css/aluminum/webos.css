@@ -3,7 +3,7 @@ joscroller > * {
 }
 
 jotoolbar joflexrow jobutton.back  {
-	display: none; 
+	display: none;
 }
 jotoolbar {
 	padding-top: 10px;

@@ -105,9 +105,9 @@ jobutton {
 
     padding: 0.5em;
     line-height: 1.7em;
-    
+
     border:solid 1px #555;
-    
+
     -webkit-box-shadow: 1px 1px 1px #fff;
 
     width: auto;
@@ -146,7 +146,7 @@ jooptionitem {
 
 	font-weight: normal;
 	cursor: pointer;
-	padding: 10px 0;  
+	padding: 10px 0;
 	-webkit-box-flex: 1;
 	text-align: center;
 	border-right-width: 0;
@@ -185,7 +185,7 @@ joexpando {
 	margin: 0px 10px 10px 10px;
 }
 jotitle {
-	
+
 	font-weight: normal;
 	cursor: pointer;
 	outline: none;
@@ -240,7 +240,7 @@ jolistitem:hover {
 
 joselect.focus {
 	background-color: transparent;
-	
+
 }
 jolist {
 	margin: 0;
@@ -312,7 +312,7 @@ textarea {
 
 	-webkit-appearance: none;
 	-webkit-box-shadow: 1px 1px 1px #fff;
-	-webkit-border-radius: 0.4em;  
+	-webkit-border-radius: 0.4em;
 
 	border: 1px solid #DDD;
 	border-bottom-left-radius: 0.4em 0.4em;
@@ -407,7 +407,7 @@ joexpandotitle {
 	text-align: left;
 }
 joexpando.open > *:first-child {
-	
+
 	-webkit-border-radius: 0;
 	-webkit-border-top-right-radius: 0.4em;
 	-webkit-border-top-left-radius: 0.4em;
@@ -452,7 +452,7 @@ jotoggle {
 
 	-webkit-box-shadow: 1px 1px 1px #fff;
 	background: white;
-  
+
 	  border: 1px solid #DDD;
 
 	position: relative;
@@ -567,12 +567,12 @@ jostack {
 	-webkit-transition: opacity 0.3s ease-out;
 }
 jostack > * {
-	
+
 	-webkit-transform-origin: 50% 100% 0;
 	-webkit-transform: rotatez(0) translatez(0);
 	-webkit-transition: -webkit-transform 0.3s ease-out, z-index 0.3s ease-out, height 0s ease, overflow 0s ease;
-	
-	
+
+
 }
 jostack > .next {
 	z-index: -1;
@@ -780,7 +780,7 @@ jonavbar {
 	border-right: none;
 	border-left: none;
 	text-align: center;
-	
+
 	-webkit-box-flex: 0;
 
 	font-size: x-large;
@@ -867,9 +867,9 @@ jopopup > jotitle {
 	font-size: 20px;
 	color: #777;
 	text-shadow: #fff 0 1px 0;
-	
+
 	border-bottom: 1px solid #777;
-	
+
 	margin-bottom:10px;
 
 }

@@ -148,7 +148,7 @@ jooptionitem:last-child {
 jobutton {
 	display: block;
 	text-align: center;
-	color: #ffffff;  
+	color: #ffffff;
 	background-color: #3D9400;
 	font-weight: normal;
 	cursor: pointer;
@@ -481,7 +481,7 @@ jotoggle {
 	border: 1px solid;
 	border-color: #D2D2D2;
 	padding: 1px;
-	
+
 	background-color: inherit;
 	position: relative;
 	overflow: hidden;
@@ -498,7 +498,7 @@ jotoggle > * {
 	padding: 10px 0;
 	border: 1px solid;
 	border-color: #D2D2D2;
-	
+
 	margin: 0;
 	text-align: center;
 	-webkit-border-radius: 3px;
@@ -506,14 +506,14 @@ jotoggle > * {
 	border-radius: 3px;
 	padding: 10px 0;
 	width: 60px;
-	
+
 	-webkit-transform: translatex(0);
 	-moz-transform: translatex(0);
 	-o-transform: translatex(0);
 	-ms-transform: translatex(0);
-	
+
 	-webkit-animation-fill-mode: forwards;
-	
+
 	-webkit-transition: -webkit-transform 2s ease !important;
 	-moz-transition: -moz-transform 0.2s ease, background-color 0.2s ease;
 	-o-transition: -o-transform 0.2s ease, background-color 0.2s ease;
