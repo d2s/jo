@@ -43,19 +43,19 @@ var App = (function() {
 //		joInput.prototype.tagName = "input";
 //		joInput.prototype.className = "stuff";
 
-	function init() {		
+	function init() {
 		// silly, but you you can load style tags with a string
 		// which may be moderately useful. the node is returned,
 		// so in theory you could replace it or remove it.
 		// a more practical case would be to use the loadCSS() method
 		// to load in an additional stylesheet
 		cssnode = joDOM.applyCSS(".htmlgroup { background: #fff; }");
-		
+
 		// more css, but deferred loading until after the app initializes
 /*
 		joDefer(function() {
 //			bodycssnode = joDOM.loadCSS("../docs/html/doc.css");
-			
+
 			// dynamic CSS loading based on platform, in this case FireFox
 			// doesn't do stack transitions well, so we're downshifting
 
@@ -66,19 +66,19 @@ var App = (function() {
 //				joDOM.loadCSS("../css/aluminum/chrome.css");
 //			else
 //				joDOM.loadCSS("../css/aluminum/gecko.css");
-			
+
 			// as an optimization, I recommend in a downloadable app that
 			// you create a custom CSS file for each platform using some
 			// sort of make-like process.
 		}, this);
 */
-		
+
 		var toolbar;
 		var nav;
-		
+
 		if (jo.matchPlatform("hpwos") && typeof PalmSystem === 'undefined')
 			joEvent.touchy = false;
-		// chaining is supported on constructors and any setters		
+		// chaining is supported on constructors and any setters
 		scn = new joScreen(
 			new joContainer([
 				new joFlexcol([
@@ -88,9 +88,9 @@ var App = (function() {
 				toolbar = new joToolbar("This is a footer, neat huh?")
 			]).setStyle({position: "absolute", top: "0", left: "0", bottom: "0", right: "0"})
 		);
-		
+
 		nav.setStack(stack);
-		
+
 		// this is a bit of a hack for now; adds a CSS rule which puts enough
 		// space at the bottom of scrolling views to allow for our floating
 		// toolbar. Going to find a slick way to automagically do this in the
@@ -98,9 +98,9 @@ var App = (function() {
 		joDefer(function() {
 			var style = new joCSSRule('jostack > joscroller > *:last-child:after { content: ""; display: block; height: ' + (toolbar.container.offsetHeight) + 'px; }');
 		});
-		
+
 		var ex;
-	
+
 		testds = new joRecord({
 			uid: "jo",
 			pwd: "password",
@@ -109,7 +109,7 @@ var App = (function() {
 			active: true,
 			note: false
 		}).setAutoSave(false);
-		
+
 		// our bogus login view
 		login = new joCard([
 			new joGroup([
@@ -155,16 +155,16 @@ var App = (function() {
 				cancelbutton = new joButton("Back")
 			])
 		]).setTitle("Form Widget Demo");
-		
+
 //	was demoing how to disable a control, but decided having a "back"
 // button was more important right now
 //		cancelbutton.disable();
 		cancelbutton.selectEvent.subscribe(back, this);
-		
+
 		// some arbitrary HTML shoved into a joHTML control
 		var html = new joHTML('<h1>Disclaimer</h1><p>This is a disclaimer. For more information, you can check <a href="moreinfo.html">this <b>file</b></a> for more info, or try your luck with <a href="someotherfile.html">this file</a>.');
 		var htmlgroup;
-		
+
 		page = new joCard([
 			new joLabel("HTML Control"),
 			htmlgroup = new joGroup(html),
@@ -174,9 +174,9 @@ var App = (function() {
 				backbutton = new joButton("Back")
 			])
 		]).setTitle("Success");
-		
+
 		htmlgroup.setStyle("htmlgroup");
-		
+
 		more = new joCard([
 			new joGroup([
 				new joCaption("Good job! This is more info. Not very informative, is it?"),
@@ -187,7 +187,7 @@ var App = (function() {
 				moreback = new joButton("Back Again")
 			])
 		]).setTitle("URL Demo");
-		
+
 		menu = new joCard([
 			list = new joMenu([
 				{ title: "Form Widgets", id: "login" },
@@ -211,7 +211,7 @@ var App = (function() {
 			else if (id != "help")
 				stack.push(joCache.get(id));
 		}, this);
-		
+
 		// we can defer creating views until they're needed
 		// using joCache
 		joCache.set("test", function() {
@@ -234,7 +234,7 @@ var App = (function() {
 
 			return card;
 		}, this);
-		
+
 		joCache.set("textarea", function() {
 			var back;
 
@@ -255,10 +255,10 @@ var App = (function() {
 
 			return card;
 		}, this);
-		
+
 		joCache.set("table", function() {
 			var back;
-			
+
 			var card = new joCard([
 				new joGroup(
 					new joTable([
@@ -285,7 +285,7 @@ var App = (function() {
 
 		joCache.set("remote", function() {
 			var container, firstbutton;
-			
+
 			var card = new joCard([
 				container = new joFlexcol([
 					new joFlexrow([
@@ -328,7 +328,7 @@ var App = (function() {
 				var c = firstbutton.container;
 				var h = c.offsetHeight - 20;
 				var w = c.offsetWidth - 20;
-				
+
 				var size = ((w > h) ? h : w) * .8;
 				container.setStyle({
 					lineHeight: h + "px",
@@ -352,13 +352,13 @@ var App = (function() {
 		button.selectEvent.subscribe(click.bind(this));
 		backbutton.selectEvent.subscribe(back, this);
 		html.selectEvent.subscribe(link, this);
-		
+
 		stack.pushEvent.subscribe(blip, this);
 		stack.popEvent.subscribe(bloop, this);
-		
+
 		joGesture.forwardEvent.subscribe(stack.forward, stack);
 		joGesture.backEvent.subscribe(stack.pop, stack);
-		
+
 		document.body.addEventListener('touchmove', function(e) {
 		    e.preventDefault();
 			joEvent.stop(e);
@@ -366,29 +366,29 @@ var App = (function() {
 
 		stack.push(menu);
 	}
-	
+
 	function blip() {
 //		blipsound.play();
 	}
-	
+
 	function bloop() {
 //		bloopsound.play();
 	}
-	
+
 	function link(href) {
 		joLog("HTML link clicked: " + href);
 		urldata.setData(href);
 		stack.push(more);
 	}
-	
+
 	function click() {
 		stack.push(page);
 	}
-	
+
 	function back() {
 		stack.pop();
 	}
-	
+
 	// public stuff
 	return {
 		"init": init,
